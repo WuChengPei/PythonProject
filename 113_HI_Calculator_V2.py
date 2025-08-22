@@ -21,7 +21,7 @@ def relative_to_assets(path: str) -> Path:
     full_path = assets_path / path
 
     if not full_path.exists():
-        print(f"⚠️ 錯誤: 找不到 {full_path}，請確認 `assets` 資料夾是否正確！")
+        print(f"請確認 `assets` 資料夾是否正確！")
     return full_path
 
 
@@ -36,7 +36,7 @@ class CalculatorApp:
         if icon_path.exists():
             self.root.iconbitmap(str(icon_path))  # 設定 icon
         else:
-            print("⚠️ 錯誤: 找不到 P.ico，請確認 assets 目錄是否正確！")
+            print("請確認 assets 目錄是否正確！")
 
         canvas = Canvas(
             root,
